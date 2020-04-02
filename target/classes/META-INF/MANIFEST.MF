@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1585809531500
+Build-Jdk: 13.0.2
+Built-By: jbonofre
+Bundle-ManifestVersion: 2
+Bundle-Name: cxf-metrics-command
+Bundle-SymbolicName: net.nanthrax.command.cxf-metrics-command
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Import-Package: org.apache.cxf;version="[3,4)",org.apache.cxf.metrics;ve
+ rsion="[3,4)",org.apache.karaf.shell.api.action;version="[4,5)",org.apa
+ che.karaf.shell.api.action.lifecycle;version="[4,5)",org.apache.karaf.s
+ hell.api.console;version="[4,5)",org.apache.karaf.shell.support.complet
+ ers;version="[4,5)",org.osgi.framework;version="[1.8,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-4.2.0.201903051501

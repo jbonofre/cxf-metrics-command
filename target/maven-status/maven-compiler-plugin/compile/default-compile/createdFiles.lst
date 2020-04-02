@@ -1,0 +1,3 @@
+net/nanthrax/command/cxf/metrics/EnableCommand.class
+net/nanthrax/command/cxf/metrics/CxfController.class
+net/nanthrax/command/cxf/metrics/BusNameCompleter.class

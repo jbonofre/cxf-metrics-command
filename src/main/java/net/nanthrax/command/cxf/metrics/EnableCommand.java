@@ -1,6 +1,7 @@
 package net.nanthrax.command.cxf.metrics;
 
 import org.apache.cxf.Bus;
+import org.apache.cxf.feature.Feature;
 import org.apache.cxf.metrics.MetricsFeature;
 import org.apache.karaf.shell.api.action.Action;
 import org.apache.karaf.shell.api.action.Argument;
@@ -21,6 +22,10 @@ public class EnableCommand extends CxfController implements Action {
         Bus bus = getBus(busName);
         if (bus != null) {
             bus.getFeatures().add(new MetricsFeature());
+        }
+        System.out.println("Bus Features");
+        for (Feature feature : bus.getFeatures()) {
+            System.out.println(feature.getClass().getName());
         }
         return null;
     }

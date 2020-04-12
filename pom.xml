@@ -45,6 +45,14 @@
                 <groupId>org.apache.karaf.tooling</groupId>
                 <artifactId>karaf-services-maven-plugin</artifactId>
                 <version>4.2.8</version>
+                <executions>
+                  <execution>
+                    <phase>process-classes</phase>
+                    <goals>
+                      <goal>service-metadata-generate</goal>
+                    </goals>
+                  </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.felix</groupId>
@@ -54,17 +62,13 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            !*
+                            net.nanthrax.command.cxf.metrics
                         </Export-Package>
                         <Import-Package>
-                            !net.nanthrax.command.cxf.metrics,
                             org.apache.cxf*;version="[3,4)",
                             org.apache.karaf.shell*;version="[4,5)",
                             *
                         </Import-Package>
-                        <Private-Package>
-                            net.nanthrax.command.cxf.metrics
-                        </Private-Package>
                     </instructions>
                 </configuration>
             </plugin>
